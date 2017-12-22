@@ -168,7 +168,7 @@ class CiiMessageCommand extends CiiConsoleCommand
 	 */
 	private function createDirectory($directory)
 	{
-		if (!is_dir($directory)) 
+		if (!is_dir($directory))
 		{
 			if (!mkdir($directory, 0777, true))
 				$this->usageError('The directory ' . $directory .' could not be created. Please make sure this process has write access to this directory.');

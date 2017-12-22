@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/charlesportwoodii/CiiMS.svg?style=flat-square)](https://github.com/charlesportwoodii/CiiMS/blob/master/LICENSE.md)
 [![Yii](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat-square)](http://www.yiiframework.com/)
 
-![CiiMS Logo Banner](	
+![CiiMS Logo Banner](
 https://s3.amazonaws.com/ciims-s3-us-01/63E6ADC1A1BF41ABDE55B4BA810F187DBF1C9E696A90713D8A1F38B69E1071CE.png)
 
 CiiMS is a fast, simple, and easy to use, full feature blogging platform and content management system built in Yii. CiiMS is, and will always be free to use and open-source.
@@ -37,7 +37,7 @@ How fast is CiiMS? In a post-installation comparison, using out of the box (non-
 - Ubuntu 14.04 x64 LTS
 - Percona Server 5.6
 - PHP 5.6.6
-	- Zend Opcache 	
+	- Zend Opcache
 - Nginx 1.7.9
 - Node 0.10.36
 ```
@@ -48,22 +48,22 @@ How fast is CiiMS? In a post-installation comparison, using out of the box (non-
 
 __A beautiful default theme__
 
-![Default Theme](	
+![Default Theme](
 https://s3-us-west-2.amazonaws.com/cdn.ciims.io/5A2ED631D493E053774C31C513F2C60FF5208B1B3AB8193D7D8D351251E2207D.png)
 
 __A powerful dashboard with custom JavaScript cards__
 
-![CiiMS Dashboard](	
+![CiiMS Dashboard](
 https://s3-us-west-2.amazonaws.com/cdn.ciims.io/949A73802B6E17CD3FA04B8FA14E76AF7EDF51736A3904E2EF7358049C51D8D2.png)
 
 __Easily browse all content entries__
 
-![Content List View](	
+![Content List View](
 https://s3-us-west-2.amazonaws.com/cdn.ciims.io/6F679654A4F7F3B9A3DD72DA32540B2CD12843C7DACB88A257372386C7325A80.png)
 
 __Powerful content editor__
 
-![CiiMS Editor](	
+![CiiMS Editor](
 https://s3-us-west-2.amazonaws.com/cdn.ciims.io/BBAD9AA513B05052FF83DC8B4F4E22CD9AFC1A5701EB33E60CA7C4A0DD32C04A.png)
 
 ## Documentation

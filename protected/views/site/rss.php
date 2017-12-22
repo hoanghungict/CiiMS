@@ -9,16 +9,16 @@
 		<pubDate><?php echo date('D, d M Y H:i:s T'); ?></pubDate>
 		<lastBuildDate><?php echo date('D, d M Y H:i:s T'); ?></lastBuildDate>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
-	
+
 		<?php foreach ($data as $k=>$v): ?>
 			<?php if ($v->password != '') { continue; } ?>
 			<item>
 				<title><?php echo htmlspecialchars(str_replace('/', '', $v['title']), ENT_QUOTES, "utf-8"); ?></title>
 				<link><?php echo $url.'/'.htmlspecialchars(str_replace('/', '', $v['slug']), ENT_QUOTES, "utf-8"); ?></link>
 				<description>
-					<?php 
-						$md = new CMarkdownParser; 
-						echo htmlspecialchars(strip_tags($md->transform($v['extract'])), ENT_QUOTES, "utf-8"); 
+					<?php
+						$md = new CMarkdownParser;
+						echo htmlspecialchars(strip_tags($md->transform($v['extract'])), ENT_QUOTES, "utf-8");
 					?>
 				</description>
 				<category><?php echo htmlspecialchars(Categories::model()->findByPk($v['category_id'])->name,  ENT_QUOTES, "utf-8"); ?></category>
@@ -29,6 +29,6 @@
 					<comments><?php echo $url.'/'.htmlspecialchars(str_replace('/', '', $v['slug']), ENT_QUOTES, "utf-8");; ?>#comments</comments>
 				<?php endif; ?>
 			</item>
-		<?php endforeach; ?>	
+		<?php endforeach; ?>
 	</channel>
 </rss>

@@ -160,7 +160,7 @@ class Users extends CiiModel
 	public function getFlaggedComments($model=false)
 	{
 		$flags = UserMetadata::model()->getPrototype('UserMetadata', array('user_id' => $this->id, 'key' => 'flaggedComments'), array('value' => CJSON::encode(array())));
-		
+
 		if ($model === true)
 			return $flags;
 

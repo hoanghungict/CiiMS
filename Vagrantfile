@@ -5,14 +5,20 @@ Vagrant.configure(2) do |config|
 
   # Use a preconfigured Vagrant box
   config.vm.box = "charlesportwoodii/php7_xenial64"
+
   config.vm.network "forwarded_port", guest: 80, host: 8080
+  #config.vm.network :private_network, ip: "88.88.88.10"
   config.vm.box_check_update = true
 
-  config.vm.synced_folder ".", "/var/www", 
+  config.vm.synced_folder ".", "/var/www",
     id: "vagrant-root",
-    owner: "vagrant", 
-    group: "www-data", 
+    owner: "vagrant",
+    group: "www-data",
     mount_options: ["dmode=775,fmode=775"]
+
+  config.ssh.username = 'vagrant'
+  config.ssh.password = 'vagrant'
+  config.ssh.insert_key = false
 
   config.vm.provision "shell", inline: <<-SHELL, privileged: false
     # Upgrade PHP & Nginx
@@ -40,7 +46,7 @@ Vagrant.configure(2) do |config|
       chmod a+x /home/vagrant/.bin/composer
       chown -R vagrant:vagrant /home/vagrant/.bin/composer
     fi
-    
+
     # Copy the Nginx configuration and restart the web server
     echo "Copying Nginx configuration"
     sudo service nginx stop

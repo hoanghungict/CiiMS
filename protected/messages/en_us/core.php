@@ -16,8 +16,8 @@
  *
  * NOTE, this file must be saved in UTF-8 encoding.
  */
-return array (
+return [
   'The requested post cannot be found.' => '',
   'The specified post cannot be found.' => '',
   'Use of CiiController::sendEmail is deprecated, and will be dropped in a future version. Use EmailSettings::send instead' => '',
-);
+];

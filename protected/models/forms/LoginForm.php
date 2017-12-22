@@ -97,10 +97,10 @@ class LoginForm extends CFormModel
 	{
 		if ($this->_identity === NULL)
 			$this->_identity = new CiiUserIdentity($this->username, $this->password, $this->twoFactorCode);
-		
+
 		return $this->_identity;
 	}
-	
+
 	/**
 	 * Authenticates the password.
 	 * This is the 'authenticate' validator as declared in rules().
@@ -149,10 +149,10 @@ class LoginForm extends CFormModel
 		// Only return true if the user needs a 2fa code and their password validation succeeded
 		if ($user->needsTwoFactorAuth() && $this->getIdentity()->validatePassword())
 			return true;
-			
+
 		return false;
 	}
-	
+
 	/**
 	 * Logs in the user using the given username and password in the model.
 	 * @return boolean whether login is successful
@@ -161,15 +161,15 @@ class LoginForm extends CFormModel
 	{
 		if (!$this->validate())
 			return false;
-			
+
 		if ($this->getIdentity()->errorCode === CiiUserIdentity::ERROR_NONE)
 		{
 			Yii::app()->user->login($this->getIdentity());
-			
+
 			// Store the API key and session_identifier as a key-set in cache
 			Yii::app()->cache->set($this->getIdentity()->getState('apiKey'), session_id(), 1800);
 			return true;
-		}	
+		}
 		else
 			return false;
 	}
